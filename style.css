@@ -1,0 +1,36 @@
+body {
+  background-color: #BBBBBB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main_contents {
+  margin-top: 50px;
+  background-color : #FFFFFF;
+  width : 540px;
+  padding : 20px
+}
+#question {
+  display : block;
+  margin-top: 30px;
+  margin-bottom : 50px;
+}
+#answer {
+  display : block;
+}
+.answers {
+  display : block;
+  margin-bottom : 10px;
+  width : 100%;
+  height : 50px;
+  border: 1px solid gray;
+  border-radius: 7%
+  word-wrap:break-word;
+  text-align: left;
+  padding : 10px;
+
+}
+//https://nykim.work/84
+@media (max-width:600px)  {
+
+}
