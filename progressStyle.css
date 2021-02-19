@@ -1,0 +1,35 @@
+
+
+progress{
+
+    display:block;
+    width:100%;
+    border:none;
+}
+        /* For Chrome or Safari */
+        progress::-webkit-progress-bar {
+            background-color: #eeeeee;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: #6495ED !important;
+        }
+
+
+        /* For Firefox */
+        progress {
+            background-color: #eee;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: #6495ED !important;
+        }
+
+        /* For IE10 */
+        progress {
+            background-color: #eee;
+        }
+
+        progress {
+            background-color: #6495ED;
+        }

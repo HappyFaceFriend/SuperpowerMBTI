@@ -16,7 +16,7 @@ function loadFile(filePath) {
     return allText;
 }
 
-window.onload = function()  {
+/*window.onload = function()  {
   var text = loadFile("data.txt");
   alert(text);
-}
+}*/
