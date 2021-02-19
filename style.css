@@ -30,12 +30,12 @@ body {
   display : block;
   margin-bottom : 10px;
   width : 100%;
-  height : 50px;
+  min-height : 50px;
   border: 1px solid gray;
-  border-radius: 7%
   word-wrap:break-word;
   text-align: left;
   padding : 10px;
+  background-color : #EEE;
 
 }
 //https://nykim.work/84

@@ -15,8 +15,18 @@ function loadFile(filePath) {
     rawFile.send(null);
     return allText;
 }
-
-/*window.onload = function()  {
-  var text = loadFile("data.txt");
-  alert(text);
-}*/
+var quizData = [];
+var numOfQuiz = 0;
+window.addEventListener('DOMContentLoaded', function(){
+  var rawData = loadFile("data.txt");
+  var sentances = rawData.split('\n');
+  for (text in sentances) {
+    if(text[0]=='#')  {
+      quizData.append([text.slice(1)]);
+      numOfQuiz++;
+    }
+    else {
+      quizData[numOfQuiz-1].append(text);
+    }
+  }
+});
