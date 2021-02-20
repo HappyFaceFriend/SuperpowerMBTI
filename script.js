@@ -19,9 +19,10 @@ var quizData = [];
 var numOfQuiz = 0;
 window.addEventListener('DOMContentLoaded', function(){
   var rawData = loadFile("data.txt");
+    alert(rawData);
+    /*
   var sentances = rawData.split('\n');
   for (text in sentances) {
-    alert(text);
     if(text[0]=='#')  {
       quizData.append([text.slice(1)]);
       numOfQuiz++;
@@ -29,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function(){
     else {
       quizData[numOfQuiz-1].append(text);
     }
-  }
+  }*/
 });
 
 var pos = 0;
