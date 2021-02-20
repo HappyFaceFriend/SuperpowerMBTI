@@ -44,6 +44,21 @@ body {
   padding : 20px;
   width : 500px;
 }
+
+#qna_slider {/*
+  -webkit-transform : translate(0,0);
+  -webkit-transform : -webkit-transform 500ms;
+
+  transform: translate(0,0);
+  transition: transform 500ms;*/
+
+  position : relative;
+}/*
+#qna_slider.move{
+  -webkit-transform :  translate(-500px,0px);
+  transform:translate(-500px,0px);
+}*/
+
 button  {
   display:block;
 }
@@ -63,6 +78,8 @@ button  {
 .selected {
     background-color : #2E2;
 }
+
+
 //https://nykim.work/84
 @media (max-width:600px)  {
 

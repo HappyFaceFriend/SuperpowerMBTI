@@ -35,12 +35,26 @@ var numOfQuiz = 0;
 var slider = null;
 var answerData=[];
 var widthOfItem = 500;
-var marginOfSlider = 0;
+var currentCard = 0;
+var progressText = null;
+function moveSlider(dir)
+{
+  var player = slider.animate([
+    {transform: "translate("+(currentCard * -widthOfItem)+"px,0px)"},
+    {transform: "translate("+((currentCard+dir) * -widthOfItem)+"px,0px)"}
+  ], 500);
+  player.addEventListener("finish",function(){
+    slider.style.transform="translate("+((currentCard * -widthOfItem))+"px,0px)";
+  });
+  currentCard += dir;
+
+  progressText.innerHTML = ""+currentCard+"/"+numOfQuiz;
+}
 function start()
 {
   slider = document.getElementById("qna_slider");
-  marginOfSlider -= widthOfItem;
-  slider.style.marginLeft = "" + marginOfSlider + "px";
+  progressText = document.getElementById("progressText");
+  moveSlider(+1);
 }
 function answerSelected(question,answer)
 {
@@ -53,8 +67,7 @@ function answerSelected(question,answer)
   but = document.getElementById(""+question+"_"+answer);
   but.classList.add("selected");
 
-  marginOfSlider -= widthOfItem;
-  slider.style.marginLeft = "" + marginOfSlider + "px";
+  moveSlider(+1);
 
 }
 
