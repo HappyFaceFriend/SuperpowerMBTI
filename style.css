@@ -15,11 +15,17 @@ body {
   margin-right : 20px;
   margin-top : 10px;
 }
+*{
+    box-sizing : border-box;
+}
 #qna_mask{
+  display : block;
+  height : 100%;
   width : 100%;
   font-size : 20px;
   overflow : hidden;
-
+  padding-left : 20px;
+  padding-right : 20px;
 }
 #question {
   display : block;
@@ -33,12 +39,15 @@ body {
 }
 #qna_slider li {
   list-style-type: none;
-  //display : inline;
+  display : inline;
   float : left;
   padding : 20px;
+  width : 500px;
 }
-#answer {
-  display : block;
+button  {
+  display:block;
+}
+#answers {
 }
 .answers {
   display : block;
@@ -50,7 +59,9 @@ body {
   text-align: left;
   padding : 10px;
   background-color : #EEE;
-
+}
+.selected {
+    background-color : #2E2;
 }
 //https://nykim.work/84
 @media (max-width:600px)  {
