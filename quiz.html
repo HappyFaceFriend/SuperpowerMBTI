@@ -6,15 +6,18 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="progressStyle.css">
 
-    <script type="text/javascript" src="script2.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
   <div id="main_contents">
-    <div id = "bgcontainer">
-      <image src="images/title.jpg" id="titleImg"/>
-      <h1 id = "titleText">나만의 초능력<br>심리테스트</h1>
+    <div id = "progressDiv">
+      <progress value="30" max="100"></progress>
+      <div id="progressText">0</div>
     </div>
-    <button onclick="start()">시작!</button>
+    <div id="qna_mask">
+      <ul id = "qna_slider">
+      </ul>
+    </div>
   </div>
 </body>
 </html>

@@ -9,6 +9,12 @@ body {
   background-color : #FFFFFF;
   width : 540px;
   height : 700px;
+  opacity : 0;
+    transition : opacity 0.4s ease;
+    -webkit-transition : opacity 0.4s ease;
+}
+#progressDiv {
+  //display:none;
 }
 #progressText{
   float:right;
@@ -36,6 +42,7 @@ body {
   list-style : none;
   padding : 0px;
   margin : 0px;
+  display : inline-block;
 }
 #qna_slider li {
   list-style-type: none;
@@ -78,7 +85,24 @@ button  {
 .selected {
     background-color : #2E2;
 }
-
+#bgcontainer{
+  width  :100%;
+  //height : 100%;
+  text-align: center;
+  position : relative;
+}
+#titleImg{
+  width:100%;
+  filter: brightness(0.4);
+}
+#titleText{
+  color:white;
+  position : absolute;
+  text-align: center;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 //https://nykim.work/84
 @media (max-width:600px)  {
