@@ -1,5 +1,6 @@
 body {
   background-color: #DDDDDD ;
+    background-color: #FFF ;
   display: flex;
   justify-content: center;
   //align-items: center;
@@ -134,7 +135,7 @@ button  {
   font-size: 15px;
   line-height : 1.6;
   word-wrap:keep-all;
-  width : 80%;
+  width : 100%;
     margin-left : 50%;
     transform: translate(-50%, 0);
     text-align: center;
