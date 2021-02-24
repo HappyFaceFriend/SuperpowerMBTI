@@ -7,7 +7,8 @@ body {
 #main_contents {
   margin-top: 50px;
   background-color : #FFFFFF;
-  width : 540px;
+  width : 100%;
+  //width : 390px;
   height : 700px;
   opacity : 0;
     transition : opacity 0.4s ease;
@@ -15,11 +16,25 @@ body {
 }
 #progressDiv {
   //display:none;
+  display : block;
 }
 #progressText{
   float:right;
   margin-right : 20px;
   margin-top : 10px;
+  display : block;
+}
+#progressBar{
+  width : 100%;
+  background-color : gray;
+    height : 20px;
+}
+#progressValue{
+  width:0;
+    height : 20px;
+  animation: all 1s forwards;
+  -webkit-animation: all 1s forwards;
+  background-color : blue;
 }
 *{
     box-sizing : border-box;
@@ -27,11 +42,12 @@ body {
 #qna_mask{
   display : block;
   height : 100%;
-  width : 100%;
+  width : 350px;
   font-size : 20px;
   overflow : hidden;
   padding-left : 20px;
   padding-right : 20px;
+  margin:auto;
 }
 #question {
   display : block;
@@ -49,7 +65,7 @@ body {
   display : inline;
   float : left;
   padding : 20px;
-  width : 500px;
+  width : 350px;
 }
 
 #qna_slider {/*
@@ -93,16 +109,19 @@ button  {
 }
 #titleImg{
   width:100%;
-  filter: brightness(0.4);
+  //filter: brightness(0.4);
 }
 #titleText{
+  display:none;
   color:white;
   position : absolute;
   text-align: center;
   top: 45%;
   left: 50%;
+  font-size : 3vw;
   transform: translate(-50%, -50%);
 }
+
 
 //https://nykim.work/84
 @media (max-width:600px)  {

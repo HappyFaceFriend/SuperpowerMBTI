@@ -58,11 +58,12 @@ var quizData = [];
 var numOfQuiz = 0;
 var slider = null;
 var answerData=[];
-var widthOfItem = 500;
+var widthOfItem = 350;
 var currentCard = 0;
 var progressText = null;
 var progressDiv = null;
 var mainContents = null;
+var progressBar = null;
 function moveSlider(dir)
 {
   var player = slider.animate([
@@ -82,6 +83,7 @@ function moveSlider(dir)
   }
 
   progressText.innerHTML = ""+(currentCard+1)+"/"+numOfQuiz;
+  progressBar.style.width = ""+(100*(currentCard+1)/numOfQuiz)+"%";
 
 }
 function finish(){
@@ -93,6 +95,7 @@ function start()
   progressText = document.getElementById("progressText");
   progressDiv = document.getElementById("progressDiv");
   mainContents = document.getElementById("main_contents");
+  progressBar = document.getElementById("progressValue");
 }
 function answerSelected(question,answer)
 {
@@ -141,6 +144,7 @@ start();
   }
   slider.style.width = ""+ widthOfItem * (quizData.length) + "px";
     progressText.innerHTML = ""+(currentCard+1)+"/"+numOfQuiz;
+    progressBar.style.width = ""+(100*(currentCard+1)/numOfQuiz)+"%";
 
 });
 
