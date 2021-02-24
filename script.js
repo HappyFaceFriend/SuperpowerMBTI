@@ -64,6 +64,9 @@ var progressText = null;
 var progressDiv = null;
 var mainContents = null;
 var progressBar = null;
+var backButton = null;
+var mbtiData = {'E':0, 'I':0, 'S':0, 'N':0, 'T':0, 'F':0, 'J':0,  'P':0};
+var mbti = "";
 function moveSlider(dir)
 {
   var player = slider.animate([
@@ -74,11 +77,23 @@ function moveSlider(dir)
     slider.style.transform="translate("+((currentCard * -widthOfItem))+"px,0px)";
   });
   currentCard += dir;
+
+  if(currentCard !=0 && currentCard != numOfQuiz)
+    backButton.style.display = "block";
+  else
+    backButton.style.display="none";
+
   if(currentCard == numOfQuiz)
   {
     progressText.innerHTML = "";
     mainContents.style.opacity = "0";
     setTimeout(finish,400);
+
+    for(var i=0; i<answerData.length; i++)
+    {
+      mbtiData[ quizData[i][answerData[i]+1][1] ] ++;
+    }
+    mbti += putMBTI('E','I') + putMBTI('S','N') + putMBTI('T','F') + putMBTI('J','P');
     return;
   }
 
@@ -86,8 +101,16 @@ function moveSlider(dir)
   progressBar.style.width = ""+(100*(currentCard+1)/numOfQuiz)+"%";
 
 }
+function putMBTI(a,b)
+{
+
+  if(mbtiData[a] > mbtiData[b])
+    return a;
+  else
+    return b;
+}
 function finish(){
-  window.location.href = "finish.html";
+  window.location.href = "finish.html#"+mbti;
 }
 function start()
 {
@@ -96,6 +119,7 @@ function start()
   progressDiv = document.getElementById("progressDiv");
   mainContents = document.getElementById("main_contents");
   progressBar = document.getElementById("progressValue");
+  backButton = document.getElementById("prevButton");
 }
 function answerSelected(question,answer)
 {
