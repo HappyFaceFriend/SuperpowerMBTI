@@ -111,6 +111,8 @@ function initElements()
 function answerSelected(question,answer)
 {
   var but = document.getElementById(""+question+"_"+answerData[question]);
+  if(question != currentCard)
+    return;
   if(but != null)
     but.classList.remove("selected");
 
