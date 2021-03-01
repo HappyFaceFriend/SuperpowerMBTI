@@ -79,7 +79,7 @@ ISTP#이편한세상#책상에 엎드리면 바로 제일 편한 자세가 취�
 
 function loadFile(filePath) {
   var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "./datas/"+filePath, false);
+    rawFile.open("GET", "datas/"+filePath, false);
     var allText="";
     rawFile.onreadystatechange = function ()
     {
