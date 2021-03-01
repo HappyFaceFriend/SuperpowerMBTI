@@ -34,9 +34,9 @@ window.addEventListener('DOMContentLoaded', function(){
   initElements();
   var type = window.location.hash.slice(1);
   //var rawData = loadFile("results/"+type+".txt");
-  var featuresRaw = loadFile("/datas/results/"+type+".txt");
-  var harmonyRaw = loadFile("/datas/harmonyData.txt");
-  var powersRaw = loadFile("/datas/MBTItoPowerData.txt");
+  var featuresRaw = loadFile("results/"+type+".txt");
+  var harmonyRaw = loadFile("harmonyData.txt");
+  var powersRaw = loadFile("MBTItoPowerData.txt");
   var sentances = featuresRaw.split('\n');
   for (var i =0; i<sentances.length; i++) {
       features.push(sentances[i].slice(1));
