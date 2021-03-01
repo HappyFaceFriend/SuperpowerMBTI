@@ -34,13 +34,14 @@ window.addEventListener('DOMContentLoaded', function(){
   initElements();
   var type = window.location.hash.slice(1);
   //var rawData = loadFile("results/"+type+".txt");
-  var rawData = rdata;
-  var hData = hdata;
-  var sentances = rdata.split('\n');
+  var featuresRaw = loadFile("/datas/results/"+type+".txt");
+  var harmonyRaw = loadFile("/datas/harmonyData.txt");
+  var powersRaw = loadFile("/datas/MBTItoPowerData.txt");
+  var sentances = featuresRaw.split('\n');
   for (var i =0; i<sentances.length; i++) {
       features.push(sentances[i].slice(1));
   }
-  sentances = hData.split('\n');
+  sentances = harmonyRaw.split('\n');
   for(var i=0; i<sentances.length; i++) {
     var words = sentances[i].split('#');
     if(words[0] == type)
@@ -49,8 +50,7 @@ window.addEventListener('DOMContentLoaded', function(){
       harmony.push(words[2]);
     }
   }
-  var pData = pdata;
-  sentances = pData.split('\n');
+  sentances = powersRaw.split('\n');
   for(var i=0; i<sentances.length; i++) {
     var words = sentances[i].split('#');
     if(words[0] == type)

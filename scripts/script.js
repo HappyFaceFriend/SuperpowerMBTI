@@ -15,8 +15,8 @@ var backButton = null;
 
 
 window.addEventListener('DOMContentLoaded', function(){
-  //var rawData = loadFile("data.txt");
-  var rawData = qdata;
+  var rawData = loadFile("/datas/quizData.txt");
+  //var rawData = qdata;
   initElements();
 
   //init quizData & answerData & numOfQuiz
