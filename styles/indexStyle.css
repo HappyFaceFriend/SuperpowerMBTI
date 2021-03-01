@@ -1,0 +1,45 @@
+
+
+
+#bgcontainer{
+  width  :100%;
+  text-align: center;
+  position : relative;
+}
+#titleImg{
+  width:100%;
+}
+#titleText{
+  display:none;
+  color:white;
+  position : absolute;
+  text-align: center;
+  top: 45%;
+  left: 50%;
+  font-size : 18px;
+  transform: translate(-50%, -50%);
+}
+#startButton{
+  width : 80%;
+    margin-left : 50%;
+    transform: translate(-50%, 0);
+    margin-top : 50px;
+  font-size : 30px;
+  height : 70px;
+  font-family: "rix";
+}
+#introText{
+  padding : 15px;
+  font-size: 18px;
+  line-height : 1.6;
+  word-wrap:keep-all;
+  width : 100%;
+    margin-left : 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+//https://nykim.work/84
+@media (max-width:600px)  {
+
+}

@@ -1,0 +1,93 @@
+#progressDiv {
+  display : block;
+}
+
+#progressText{
+  display : block;
+  margin-right : 20px;
+  margin-top : 10px;
+  text-align : right;
+}
+
+#progressBar{
+  width : 100%;
+  height : 20px;
+  background-color : gray;
+}
+
+#progressValue{
+  width : 0;
+  height : 20px;
+  background-color : blue;
+
+  animation: all 1s forwards;
+  -webkit-animation: all 1s forwards;
+}
+
+#qna_mask{
+  display : block;
+  margin:auto;
+  max-width : 350px;
+  height : 100%;
+  font-size : 20px;
+  overflow : hidden;
+}
+
+#question {
+  display : block;
+  margin-top: 20px;
+  margin-bottom : 50px;
+}
+
+#qna_slider {
+  list-style : none;
+  padding : 0px;
+  margin : 0px;
+  display : inline-block;
+}
+
+#qna_slider li {
+  display : inline;
+  list-style-type: none;
+  float : left;
+  padding : 20px;
+  width : 350px;
+}
+
+#prevButton{
+  display: none;
+  position : absolute;
+  left: 50%;
+  bottom : 40px;
+  transform: translate(-50%,0);
+  width : 100px;
+  height : 50px;
+  font-family: "rix";
+  font-size : 18px;
+
+}
+
+#qna_slider {
+  position : relative;
+}
+
+button  {
+  display:block;
+}
+
+.answers {
+  display : block;
+  margin-bottom : 10px;
+  padding : 10px;
+  width : 100%;
+  min-height : 50px;
+  border: 1px solid gray;
+  word-break : keep-all;
+  text-align: left;
+  background-color : #EEE;
+  font-family: "rix";
+  font-size : 18px;
+}
+.selected {
+    background-color : #2E2;
+}

@@ -1,0 +1,22 @@
+#discription li  {
+  text-align: left;
+  margin-bottom : 20px;
+}
+
+#text1{
+  margin-top : 50px;
+  margin-bottom : 20px;
+  font-size : 15px;
+  text-align: center;
+}
+#text2{
+  margin : 0px;
+  font-size : 32px;
+  text-align: center;
+}
+#text3{
+  margin : 0px;
+  font-size : 18px;
+  margin-bottom : 80px;
+  text-align: center;
+}

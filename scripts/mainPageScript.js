@@ -1,5 +1,5 @@
-
 var mainContents = null;
+
 window.addEventListener('DOMContentLoaded', function(){
   mainContents = document.getElementById("main_contents");
 });
