@@ -1,10 +1,13 @@
 * {   box-sizing : border-box; }
+
 @font-face{
   src : url("../cookie.ttf");
   font-family:"rix";
 }
 html {
+  overflow-x: hidden;
    height:100%;
+   width : 100%;
    word-break : keep-all;
    font-family : "rix";
 }
@@ -15,15 +18,16 @@ body {
   justify-content: center;
   //align-items: center;
   height:100%;
+  width : 100%;
+  margin : 0;
 }
 
 #main_contents {
   background-color : #FFF;
   width : 100%;
   height : 100%;
-  max-width : 600px;
+  //max-width : 600px;
   opacity : 0;
-
   transition : opacity 0.4s ease;
   -webkit-transition : opacity 0.4s ease;
 }
