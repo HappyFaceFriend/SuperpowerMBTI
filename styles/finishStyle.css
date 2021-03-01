@@ -2,15 +2,13 @@
   text-align: left;
   margin-bottom : 20px;
   font-size : 18px;
-  margin-left : 10px;
-  margin-right : 10px;
   color : #1C2833;
 }
 
 #text1{
-  margin-top : 50px;
-  margin-bottom : 20px;
-  font-size : 18px;
+  margin-top : 70px;
+  margin-bottom : 50px;
+  font-size : 24px;
   text-align: center;
   color : #ff9900;
 }
@@ -30,12 +28,13 @@
   color : #6E2C00;
 }
 #resultImage{
-  width : 100%;
+  max-width : 100%;
+  max-height: 320px;
 }
 #harmonyWrapper{
-  margin-top : 100px;
+  margin-top : 70px;
   width : 100%;
-  margin-bottom : 200px;
+  margin-bottom : 70px;
   text-align: center;
 }
 .harmony{
@@ -51,19 +50,52 @@
 }
 .harmony img{
   margin-top : 10px;
-  width : 100%;
+  max-width : 100%;
+  max-height:200px;
 }
 .harmony p{
   margin : 0;
-  font-size : 18px;
+  font-size : 20px;
 }
 #badPower, #goodPower{
-  font-size: 22px;
+  font-size: 24px;
   color : #cc6600;
 }
 #badText{
-  color : #28B463;
+  color : #E74C3C;
 }
 #goodText{
-  color : #E74C3C;
+  color : #239B56;
+}
+
+#startText,#copyText{
+color : #6E2C00;
+  text-align: center;
+  margin : 0;
+  margin-bottom : 10px;
+  font-size : 20px;
+}
+
+#startButton,#copyButton{
+  display:block;
+  width : 70%;
+  margin : auto;
+    margin-bottom : 50px;
+  font-size : 30px;
+  height : 70px;
+  font-family: "rix";
+  background-color: #FDF2E9;
+  border-color : #EDBB99;
+  border-radius: 10px;
+  border-width: 5px;
+  color : #6E2C00;
+}
+#filler{
+  height : 200px;
+
+}
+.scrollAnim {
+  opacity : 0;
+  transition : all 1s ease;
+  -webkit-transition : all 1s ease;
 }

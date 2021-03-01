@@ -11,6 +11,13 @@ var goodImage = null;
 var badImage = null;
 var goodPower = null;
 var badPower = null;
+
+var winH = window.innerHeight;
+var scrollY = window.scrollY;
+var animElements = [];
+var absoluteYs = [];
+
+
 function initElements()
 {
     mainContents = document.getElementById("main_contents");
@@ -69,15 +76,42 @@ window.addEventListener('DOMContentLoaded', function(){
   badPower.innerHTML = powerName[2];
   var tstr = "";
   for(var i=0; i<features.length; i++)
-    tstr += "<li>"+features[i]+"</li>";
+    tstr += "<li class=\"scrollAnim\">"+features[i]+"</li>";
   discription.innerHTML = tstr;
 
   resultImage.src = "images/results/"+type+".jpg";
   goodImage.src = "images/results/"+harmony[0]+".jpg";
   badImage.src = "images/results/"+harmony[1]+".jpg";
 
-
+  animElements = Array.prototype.slice.call( document.getElementsByClassName("scrollAnim") );
+  for(var i=0; i<animElements.length; i++)
+  {
+    absoluteYs.push(animElements[i].getBoundingClientRect().top);
+  }
 });
+
+document.addEventListener('scroll',checkScroll);
+var check = true;
+function checkScroll()  {
+  if(!check)
+    return;
+  for(var i=0; i<animElements.length; i++)
+  {
+    if(animElements[i].getBoundingClientRect().top< window.innerHeight)
+    {
+      animElements[i].style.opacity = "1";
+      absoluteYs.splice(i,1);
+      animElements.splice(i,1);
+      check=false;
+      setTimeout(function(){
+        check = true;
+      },190);
+      setTimeout(checkScroll,200);
+      return;
+    }
+  }
+}
+
 
 function loadImage(path, id)
 {
@@ -89,4 +123,24 @@ function loadImage(path, id)
 window.onload = function(){
 
   mainContents.style.opacity = "1";
+  checkScroll();
 };
+
+function start() {
+  mainContents.style.opacity = "0";
+  setTimeout(quiz,400);
+}
+
+function quiz(){
+  window.location.href = "index.html";
+}
+
+function copy(){
+  const tempElem=document.createElement('textarea');
+  tempElem.value = window.location.href;
+  document.body.appendChild(tempElem);
+  tempElem.select();
+  document.execCommand('copy');
+  document.body.removeChild(tempElem);
+  alert("주소가 복사 됐습니다. 친구에게 공유해보세요!");
+}

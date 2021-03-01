@@ -29,6 +29,7 @@ body {
   max-width : 600px;
   opacity : 0;
   padding : 10px;
+  text-align: center;
   transition : opacity 0.4s ease;
   -webkit-transition : opacity 0.4s ease;
 }
