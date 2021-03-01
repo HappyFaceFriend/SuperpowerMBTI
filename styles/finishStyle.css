@@ -1,6 +1,7 @@
 #discription li  {
   text-align: left;
   margin-bottom : 20px;
+  font-size : 18px;
 }
 
 #text1{
@@ -16,7 +17,7 @@
 }
 #text3{
   margin : 0px;
-  font-size : 18px;
+  font-size : 22px;
   margin-bottom : 80px;
   text-align: center;
 }

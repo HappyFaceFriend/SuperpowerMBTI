@@ -1,3 +1,7 @@
+
+html {
+  overflow: hidden;
+}
 #progressDiv {
   display : block;
 }
@@ -12,13 +16,13 @@
 #progressBar{
   width : 100%;
   height : 20px;
-  background-color : gray;
+  background-color : #CCD1D1 ;
 }
 
 #progressValue{
   width : 0;
   height : 20px;
-  background-color : blue;
+  background-color : #F8C471;
 
   animation: all 1s forwards;
   -webkit-animation: all 1s forwards;
@@ -59,13 +63,18 @@
   display: none;
   position : absolute;
   left: 50%;
-  bottom : 40px;
+  bottom : 200px;
   transform: translate(-50%,0);
   width : 100px;
   height : 50px;
   font-family: "rix";
   font-size : 18px;
-
+  border-radius : 5px;
+  border-color : #85929E;
+  background-color: #EAEDED;
+  border-style : solid;
+  border-width : 2px;
+  color : #5D6D7E;
 }
 
 #qna_slider {

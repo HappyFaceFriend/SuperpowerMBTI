@@ -5,7 +5,7 @@
   font-family:"rix";
 }
 html {
-  overflow-x: hidden;
+//overflow-x: hidden;
    height:100%;
    width : 100%;
    word-break : keep-all;
