@@ -91,6 +91,6 @@ function loadFile(filePath) {
             }
         }
     }
-    //rawFile.send(null);
+    rawFile.send(null);
     return allText;
 }
