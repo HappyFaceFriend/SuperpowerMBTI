@@ -27,6 +27,11 @@
   font-size : 30px;
   height : 70px;
   font-family: "rix";
+  background-color: #FDF2E9;
+  border-color : #EDBB99;
+  border-radius: 10px;
+  border-width: 5px;
+  color : #6E2C00;
 }
 #introText{
   padding : 15px;
