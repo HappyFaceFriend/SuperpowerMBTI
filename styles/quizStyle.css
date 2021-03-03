@@ -39,7 +39,7 @@ html {
 
 #question {
   display : block;
-  margin-top: 60px;
+  margin-top: 20px;
   margin-bottom : 50px;
   font-size : 24px;
 }
@@ -63,7 +63,7 @@ html {
   display: none;
   position : absolute;
   left: 50%;
-  bottom : 200px;
+  bottom : 150px;
   transform: translate(-50%,0);
   width : 100px;
   height : 50px;
