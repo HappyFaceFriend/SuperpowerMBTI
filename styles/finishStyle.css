@@ -99,3 +99,10 @@ color : #6E2C00;
   transition : all 1s ease;
   -webkit-transition : all 1s ease;
 }
+
+#dev{
+  margin-top : 60px;
+  color : #CCD1D1;
+  font-size : 14px;
+  text-align: center;
+}
