@@ -23,7 +23,9 @@ window.addEventListener('DOMContentLoaded', function(){
   var sentances = rawData.split('\n');
   for (var i =0; i<sentances.length; i++) {
     let text = sentances[i];
-    if(text[0]=='#')  {
+    if(text =='')
+      continue;
+    else if(text[0]=='#')  {
       quizData.push([text.slice(1)]);
       numOfQuiz++;
       answerData.push(-1);

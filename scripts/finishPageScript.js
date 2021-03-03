@@ -39,10 +39,14 @@ window.addEventListener('DOMContentLoaded', function(){
   var powersRaw = loadFile("MBTItoPowerData.txt");
   var sentances = featuresRaw.split('\n');
   for (var i =0; i<sentances.length; i++) {
+    if(sentances[i]=='')
+      continue;
       features.push(sentances[i].slice(1));
   }
   sentances = harmonyRaw.split('\n');
   for(var i=0; i<sentances.length; i++) {
+    if(sentances[i]=='')
+      continue;
     var words = sentances[i].split('#');
     if(words[0] == type)
     {
@@ -52,6 +56,8 @@ window.addEventListener('DOMContentLoaded', function(){
   }
   sentances = powersRaw.split('\n');
   for(var i=0; i<sentances.length; i++) {
+    if(sentances[i]=='')
+      continue;
     var words = sentances[i].split('#');
     if(words[0] == type)
     {
