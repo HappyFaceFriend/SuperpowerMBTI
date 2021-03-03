@@ -15,7 +15,6 @@ var badPower = null;
 var winH = window.innerHeight;
 var scrollY = window.scrollY;
 var animElements = [];
-var absoluteYs = [];
 
 
 function initElements()
@@ -30,6 +29,7 @@ function initElements()
     goodPower = document.getElementById("goodPower");
     badPower = document.getElementById("badPower");
 }
+
 window.addEventListener('DOMContentLoaded', function(){
   initElements();
   var type = window.location.hash.slice(1);
@@ -90,10 +90,7 @@ window.addEventListener('DOMContentLoaded', function(){
   badImage.src = "images/results/"+harmony[1]+".jpg";
 
   animElements = Array.prototype.slice.call( document.getElementsByClassName("scrollAnim") );
-  for(var i=0; i<animElements.length; i++)
-  {
-    absoluteYs.push(animElements[i].getBoundingClientRect().top);
-  }
+
 });
 
 document.addEventListener('scroll',checkScroll);
@@ -106,7 +103,6 @@ function checkScroll()  {
     if(animElements[i].getBoundingClientRect().top< window.innerHeight)
     {
       animElements[i].style.opacity = "1";
-      absoluteYs.splice(i,1);
       animElements.splice(i,1);
       check=false;
       setTimeout(function(){
