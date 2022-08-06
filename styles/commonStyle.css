@@ -1,7 +1,7 @@
 * {   box-sizing : border-box; }
 
 @font-face{
-  src : url("../cookie.ttf");
+  src : url("../fonts/cookie.ttf");
   font-family:"rix";
 }
 html {
